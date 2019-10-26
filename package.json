@@ -2,7 +2,7 @@
   "name": "jonessite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mcliff1.github.io/europe2019",
+  "homepage": "https://mcliff1.github.io/jonessite",
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
