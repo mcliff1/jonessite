@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To Publish to GH Pages
+
+Create Travis CI file
+
+**Node Changes**
+1. run `npm `
+1. add to package.json
+  - *homepage: https://mcliff1.github.io/jonessite*
+  - *predeploy: npm run build*
+  - *deploy: gh-pages -d build*
+
 ## Available Scripts
 
 In the project directory, you can run:
