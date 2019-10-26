@@ -5,11 +5,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Create Travis CI file
 
 **Node Changes**
-1. run `npm `
+1. run `npm install gh-pages --save-dev`
 1. add to package.json
   - *homepage: https://mcliff1.github.io/jonessite*
   - *predeploy: npm run build*
   - *deploy: gh-pages -d build*
+
+
+## Install Node Packages
+
+Install the following
+```
+npm install tsutils
+npm install typescript
+npm install bootstrap
+```
 
 ## Available Scripts
 

@@ -4,9 +4,12 @@
   "private": true,
   "homepage": "https://mcliff1.github.io/jonessite",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "tsutils": "^3.17.1",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
