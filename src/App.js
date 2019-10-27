@@ -1,7 +1,7 @@
 import React from 'react';
 import About from './components/About';
 import Contact from './components/Contact';
-import Navigation from './components/Navigation';
+//import Navigation from './components/Navigation';
 
 function App() {
   return (
