@@ -5,9 +5,7 @@ class About extends Component {
     return (
       <div className="container-fluid">
         <div className="border border-primary rounded">
-          <p>This is where we talk about our self.
-          Show our stuff.
-          Why we be so cool.
+          <p>Chad has been working  in logistics  for over twenty five years.
           </p>
           <p>maybe we put a green border or background</p>
         </div>
