@@ -10,7 +10,6 @@ class Contact extends Component {
   <p><a href="mailto:chubble@priority1inc.net" target="_blank" class="btn btn-primary">chubble@priority1inc.net</a></p>
   <p><a href="mailto:chad.hubble@gmail.com" target="_blank" class="btn btn-secondary">chad.hubble@gmail.com</a></p>
   <p><a href="tel:3036679595" class="phone">303-667-9595 direct</a></p>
-          </p>
         </div>
       </div>
     );
