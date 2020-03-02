@@ -5,9 +5,11 @@ class Contact extends Component {
     return (
       <div className="container-fluid">
         <div className="border border-info rounded">
-          <p>
-          In this section we want to write something about how to contact us.
-          Maybe some email icon, or twitter bird.
+          <h2>Let’s discuss your transportation needs today!</h2>
+          <p>Please call or email Chad direct:
+  chubble@priority1inc.net
+  chad.hubble@gmail.com
+  303-667-9595 direct
           </p>
         </div>
       </div>
