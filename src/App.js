@@ -8,6 +8,7 @@ function App() {
     <div>
       <div className="container">
         <About />
+        <p></p>
         <Contact />
       </div>
     </div>
