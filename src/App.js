@@ -1,5 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import './App.css';
+import Nav from './Nav';
 import About from './components/About';
 import Contact from './components/Contact';
 //import Navigation from './components/Navigation';
@@ -12,11 +15,16 @@ function App() {
   return (
     //<div style={{backgroundImage: `(${desktopImage})`}}>
     <div className="bg">
+      <Router>
       <div className="container">
-        <About />
-        <p></p>
-        <Contact />
+        <Nav />
+
+        <div>
+          <Route exact path="/" component={About} />
+          <Route path="/contact" component={Contact} />
+        </div>
       </div>
+    </Router>
     </div>
   );
 }
