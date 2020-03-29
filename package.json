@@ -2,7 +2,7 @@
   "name": "jonessite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mcliff1.github.io/jonessite",
+  "homepage": "https://mcliff1.github.io/jonessite/index.html",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.11.0",
