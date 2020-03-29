@@ -13,6 +13,21 @@
   background-position: center center;
 }
 
+.nav {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+}
+
+.navItem {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+}
 
 .App-link {
   color: #09d3ac;
