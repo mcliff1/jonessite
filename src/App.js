@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+//import { Router, Route } from 'react-router';
 
 import './App.css';
-import Nav2 from './Nav2';
+import SimpleNav from './SimpleNav';
 import About from './components/About';
 import Contact from './components/Contact';
 //import Navigation from './components/Navigation';
@@ -17,8 +18,8 @@ function App() {
     <div className="bg">
       <Router>
       <div className="container">
-        <Nav2 />
-        
+        <SimpleNav />
+
 
         <div>
           <Route exact path="/" component={About} />

@@ -2,33 +2,28 @@
   text-align: center;
   height: 100%;
   margin: 0;
-  color: #ffffff;
 }
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.header li a {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
 
 .bg {
   height: 100%;
-  background-image: url('./images/background.png');
-  background-size: cover;
+  background-image: url('./images/bg2.png');
+  //background-image: url('./images/background.png');
+  //background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.nav {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: flex;
-}
-
-.navItem {
-  list-style-type: none;
-  text-align: center;
-  padding: 10px;
-  flex: 1;
-}
-
-.App-link {
-  color: #09d3ac;
 }

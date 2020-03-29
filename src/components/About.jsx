@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="border border-primary rounded">
+        <div className="border border-primary rounded text-primary">
           <h2>About Us</h2>
           <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc</p>
           <p>Chad has over 26 years of experience handling truckload, LTL, air freight and small parcel</p>

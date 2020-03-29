@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-class Nav2 extends Component {
+class SimpleNav extends Component {
   constructor(props) {
     super(props);
 
@@ -21,15 +21,13 @@ class Nav2 extends Component {
 
   render() {
     return(
-      <div className="nav navItem">
-        <nav>
-        <ul>
-          <li className="navItem"><Link to="/">Home</Link></li>
-          <li className="navItem"><Link to="/contact">Contact</Link></li>
+      <div>
+        <ul className="header">
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
-        </nav>
       </div>
     );
   }
 }
-export default Nav2;
+export default SimpleNav;
