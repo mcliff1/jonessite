@@ -12,6 +12,8 @@ install:
   - pip install awscli --user
 
 script:
+  - BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name jonessite | jq '.Stacks[0].Outputs')
+  - echo $BUCKET
   - aws sts get-caller-identity
   - npm run build
   #- aws s3 sync
