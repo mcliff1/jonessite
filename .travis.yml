@@ -10,7 +10,9 @@ cache:
     - node_modules
 
 script:
+  - aws sts get-caller-identity
   - npm run build
+  #- aws s3 sync
 
 deploy:
   provider: pages
@@ -19,3 +21,15 @@ deploy:
   local_dir: build
   on:
     branch: master
+
+
+# deploy:
+#   provider: s3
+#   bucket:
+#   on:
+#     branch: master
+
+
+notifications:
+  email:
+    on_failure: always
