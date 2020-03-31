@@ -8,6 +8,8 @@ branches:
 cache:
   directories:
     - node_modules
+install:
+  - pip install awscli
 
 script:
   - aws sts get-caller-identity
