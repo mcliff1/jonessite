@@ -2,7 +2,7 @@
   "name": "jonessite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jonessite.mattcliff.net/index.html",
+  "homepage": "https://jonessite.mattcliff.net/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.11.0",
