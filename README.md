@@ -17,6 +17,7 @@ For Travis CI to build to S3 static site
 2. expects to deploy to a specific AWS Account/Region where an expected Stack is already deployed
 
 
+[![Build Status](https://travis-ci.org/mcliff1/jonessite.svg?branch=master)](https://travis-ci.org/mcliff1/jonessite)
 
 
 ## Install Node Packages

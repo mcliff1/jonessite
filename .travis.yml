@@ -12,11 +12,14 @@ install:
   - pip install awscli --user
 
 script:
-  - BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name jonessite | jq '.Stacks[0].Outputs')
+  # pull from Outputs[] where OutputKey = outputbucket or all expoerts for jonessite-bucket
+  - STACK_NAME=jonessite
+  - BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)
+  #- BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name jonessite | jq '.Stacks[0].Outputs[0].OutputValue')
   - echo $BUCKET
   - aws sts get-caller-identity
   - npm run build
-  #- aws s3 sync
+  - aws s3 sync ./build s3://${BUCKET}/ --delete
 
 deploy:
   provider: pages
