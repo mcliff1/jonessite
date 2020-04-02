@@ -17,7 +17,7 @@ class Contact extends Component {
   <p><a href="tel:3036679595" class="phone">303-667-9595 direct</a></p>
         </div>
          </Col>
-        <Col><img src={InlineImage}></img></Col>
+        <Col><img src={InlineImage} alt="Trucking Logistics"></img></Col>
         </Row>
       </Container>
     );

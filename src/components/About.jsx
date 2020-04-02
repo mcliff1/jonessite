@@ -22,7 +22,7 @@ class About extends Component {
         <div className="border border-primary rounted">Warehouse partner services  - When RES - Renewable Energy Systems was installing a project in southern California, everything was going well until the government services created a delay with permitting of the final install.  The 40 ocean containers were already set to land in Long Beach and the demurrage cost was going to be in the thousands of dollars, RES came to Chad asking for a solution.  We established a partnership for drayage and warehouse storage of the freight and do a full inventory receiving of the 400+ solar panels for future delivery later in the summer.  Our solution again saved the client money and established a streamline of the deliveries when the facility was ready to proceed.
         </div>
       </Col>
-      <Col xs><img src={InlineImage}></img></Col>
+      <Col xs><img src={InlineImage} alt="Trucking Logistics"></img></Col>
       </Row>
 
       </Container>
