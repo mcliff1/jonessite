@@ -11,7 +11,7 @@ ul.header li {
 }
 
 ul.header li a {
-  color: yellow;
+  //color: yellow;
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
@@ -21,7 +21,7 @@ ul.header li a {
 
 .bg {
   height: 100%;
-  background-image: url('./images/bg2.png');
+  //background-image: url('./images/bg2.png');
   //background-image: url('./images/background.png');
   //background-size: cover;
   background-repeat: no-repeat;
