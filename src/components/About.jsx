@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InlineImage from '../images/redtruck_small.jpeg';
-import Carousel from './Carousel'
-import MyCarousel from './MyCarousel'
+//import Carousel from './Carousel'
+//import MyCarousel from './MyCarousel'
 
 class About extends Component {
   render() {

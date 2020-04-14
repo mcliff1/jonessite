@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Carousel, CarouselItem, CarouselCaption, CarouselIndicators, CarouselControl } from 'reactstrap';
+import { Carousel, CarouselItem, CarouselCaption } from 'reactstrap';
+//import { Carousel, CarouselItem, CarouselCaption, CarouselIndicators, CarouselControl } from 'reactstrap';
 
 // TODO copy from here: https://reactstrap.github.io/components/carousel/
 
 class MyCarousel extends Component {
-  
+
   render() {
     return (
       <div>
