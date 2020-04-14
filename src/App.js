@@ -17,15 +17,14 @@ function App() {
   return (
     //<div style={{backgroundImage: `(${desktopImage})`}}>
     <div className="container">
+      <Router>
         <Navigation />
         <main role="main">
-          <Router>
 
         <div>
           <Route exact path="/" component={About} />
           <Route path="/contact" component={Contact} />
         </div>
-      </Router>
 
 
           <footer class="container">
@@ -34,6 +33,7 @@ function App() {
           </footer>
 
         </main>
+      </Router>
 
     </div>
   );
