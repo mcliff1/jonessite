@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InlineImage from '../images/redtruck_small.jpeg';
+import InlineImage from '../images/redtruck_crop2.jpeg';
 //import Carousel from './Carousel'
 //import MyCarousel from './MyCarousel'
 
