@@ -1,8 +1,33 @@
-.App {
-  text-align: center;
-  height: 100%;
-  margin: 0;
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
 }
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 10rem;
+  background-color: #777777;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+
 
 ul.header li {
   display: inline;
@@ -16,14 +41,4 @@ ul.header li a {
   text-decoration: none;
   padding: 20px;
   display: inline-block;
-}
-
-
-.bg {
-  height: 100%;
-  //background-image: url('./images/bg2.png');
-  //background-image: url('./images/background.png');
-  //background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
