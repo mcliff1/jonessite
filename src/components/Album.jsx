@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InlineImage from '../images/redtruck_crop2.jpeg';
+import InlineImage from '../images/Fleetwood160x160.jpg';
 //import Carousel from './Carousel'
 //import MyCarousel from './MyCarousel'
 
@@ -10,9 +10,18 @@ class Album extends Component {
 
             <div className="jumbotron">
               <div className="container">
-                <h1 className="display-3">Jones Logistics</h1>
-                <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
+                <div className="row">
+                  <div className="col">
+                    <h1 className="display-3">Jones Logistics</h1>
+                    <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
+                  </div>
+                <div className="col-xs">
+                  <img src={InlineImage} alt="Trucking Logistics"></img>
+                </div>
               </div>
+              </div>
+
+
             </div>
 
             <div className="container">
@@ -48,7 +57,6 @@ class Album extends Component {
         <div className="border border-primary rounted">Warehouse partner services  - When RES - Renewable Energy Systems was installing a project in southern California, everything was going well until the government services created a delay with permitting of the final install.  The 40 ocean containers were already set to land in Long Beach and the demurrage cost was going to be in the thousands of dollars, RES came to Chad asking for a solution.  We established a partnership for drayage and warehouse storage of the freight and do a full inventory receiving of the 400+ solar panels for future delivery later in the summer.  Our solution again saved the client money and established a streamline of the deliveries when the facility was ready to proceed.
         </div>
       </div>
-      <div className="col xs"><img src={InlineImage} alt="Trucking Logistics"></img></div>
       </div>
 
     </div>
