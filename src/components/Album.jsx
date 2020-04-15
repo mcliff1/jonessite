@@ -1,15 +1,48 @@
 import React, { Component } from 'react';
 import InlineImage from '../images/redtruck_crop2.jpeg';
-import Album from './Album'
 //import Carousel from './Carousel'
 //import MyCarousel from './MyCarousel'
 
-class About extends Component {
+class Album extends Component {
   render() {
     return (
+        <div>
+
+            <div class="jumbotron">
+              <div class="container">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <h2>Heading</h2>
+                  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                  <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                  <h2>Heading</h2>
+                  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                  <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                  <h2>Heading</h2>
+                  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                  <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+              </div>
+
+              <hr />
+
+            </div>
+
+
+
       <div className="container-fluid">
-        <Album />
-        <div className="row">
+       <div className="row">
           &nbsp;
           <div className="border border-primary rounded">
             <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc</p>
@@ -30,6 +63,8 @@ class About extends Component {
       </div>
 
     </div>
+
+  </div>
     );
   }
 
@@ -46,4 +81,4 @@ class About extends Component {
 // </div>
 
 
-export default About;
+export default Album;
