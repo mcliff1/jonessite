@@ -8,30 +8,29 @@ class Album extends Component {
     return (
         <div>
 
-            <div class="jumbotron">
-              <div class="container">
-                <h1 class="display-3">Hello, world!</h1>
+            <div className="jumbotron">
+              <div className="container">
+                <h1 className="display-3">Jones Logistics</h1>
                 <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
               </div>
             </div>
 
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <h2>Heading</h2>
-                  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                  <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <div className="container">
+              <div className="row">
+                <div className="col-md-4">
+                  <h2>Experience</h2>
+                  <p>Chad has over 26 years of experience handling truckload, LTL, air freight and small parcel.</p>
+                  <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
-                <div class="col-md-4">
-                  <h2>Heading</h2>
-                  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                  <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <div className="col-md-4">
+                  <h2>Special Projects</h2>
+                  <p>Moving of Flying Dog Brewery from Colorado to Maryland, high rise construction project delivery throughout the United States, heavy haul equipment moves to Fairbanks, Alaska. </p>
+                  <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
-                <div class="col-md-4">
-                  <h2>Heading</h2>
-                  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                  <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <div className="col-md-4">
+                  <h2>Service</h2>
+                  <p>Our combination of being with a well leveraged company and high level technology built by Priority 1 Inc making it easy to do business.</p>
+                  <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
               </div>
 
@@ -42,16 +41,6 @@ class Album extends Component {
 
 
       <div className="container-fluid">
-       <div className="row">
-          &nbsp;
-          <div className="border border-primary rounded">
-            <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc</p>
-            <p>Chad has over 26 years of experience handling truckload, LTL, air freight and small parcel</p>
-            <p>Special Projects include moving of Flying Dog Brewery from Colorado to Maryland, high rise construction project delivery throughout the United States, heavy haul equipment moves to Fairbanks, Alaska</p>
-            <p>Our combination of being with a well leveraged company and high level technology built by Priority 1 Inc making it easy to do business</p>
-          </div>
-          &nbsp;
-        </div>
       <div className="row">
       <div className="col">
         <div className="border border-primary rounted">Project freight experience - Chad oversaw, priced and handled the entire Flying Dog Brewery move from Colorado to Maryland.  We worked with Flying Dog management to price up several potential site locations strategically looking at sales numbers and what made sense from a logistics perspective.  We contracted crane services for the pickup and delivery and arranged 11 flatbed shipments that included 3 oversized shipments requiring travel escorts and permitting.   All went well and the brewery was back up and running two weeks later in the process.  Our experience in handling such specialized freight created a savings in down time and was cost effective in coordination with the costly crane services that we were able to minimize through our preparedness.
