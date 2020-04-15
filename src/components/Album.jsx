@@ -8,21 +8,21 @@ class Album extends Component {
     return (
         <div>
 
-            <div className="jumbotron">
-              <div className="container">
-                <div className="row">
-                  <div className="col">
-                    <h1 className="display-3">Jones Logistics</h1>
-                    <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
-                  </div>
+          <div className="jumbotron">
+            <div className="container">
+              <div className="row">
+                <div className="col">
+                  <h1 className="display-3">Jones Logistics</h1>
+                  <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
+                </div>
                 <div className="col-xs">
                   <img src={InlineImage} alt="Trucking Logistics"></img>
                 </div>
               </div>
-              </div>
-
-
             </div>
+
+
+          </div>
 
             <div className="container">
               <div className="row">
