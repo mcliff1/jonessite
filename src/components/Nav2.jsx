@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 class Navigation extends Component {
   render() {
@@ -16,7 +18,7 @@ class Navigation extends Component {
               <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <NavLink to="/contact" className="nav-link">Contact</NavLink>
             </li>
           </ul>
         </div>
