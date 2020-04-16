@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-In Progress: using bootstrap Carousel template to model some styling
+In Progress: using bootstrap Albumn/Carousel template to model some styling
 
 
 ## To Publish to GH Pages
