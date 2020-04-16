@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
-import Navigation from './components/Nav2';
+import Navigation from './components/Nav3';
 import About from './components/About';
 import Contact from './components/Contact';
 
@@ -19,14 +19,14 @@ function App() {
             <Route path="/contact" component={Contact} />
           </div>
 
-          <footer class="container">
-            <p class="float-right"><a href="/#">Back to top</a></p>
-            <p>&copy; 2017-2020 Jones Logistics, Inc &middot; <a href="https://www.truckingcolorado.com/contact">Contact</a>
-             &middot; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
-            </p>
-          </footer>
-
         </main>
+
+        <footer className="container">
+          <p className="float-right"><a href="/#">Back to top</a></p>
+          <p>&copy; 2017-2020 Jones Logistics, Inc &middot; <a href="https://www.truckingcolorado.com/contact">Contact</a>
+           &middot; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
+          </p>
+        </footer>
       </Router>
     </div>
   );

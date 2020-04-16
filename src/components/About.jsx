@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import InlineImage from '../images/Fleetwood160x160.jpg';
+//import BannerImage from '../branding/bw_logo.png';
 
 //import Album from './Album'
 //import Carousel from './Carousel'
 //import MyCarousel from './MyCarousel'
+// <img src={BannerImage} alt="Jones Logistics Trucking"></img>
 
 class About extends Component {
   render() {
