@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-//import {Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 
 class Navigation extends Component {
@@ -8,22 +8,20 @@ class Navigation extends Component {
     return (
       <div>
     <header>
-      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <Navbar className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <NavLink className="navbar-brand" to="/">Jones Logistic</NavLink>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
-          <ul className="navbar-nav mr-auto">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
             <li className="nav-item">
               <NavLink to="/" className="nav-link">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/contact" className="nav-link">Contact</NavLink>
             </li>
-          </ul>
-        </div>
-      </nav>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </header>
   </div>
   )
