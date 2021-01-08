@@ -39,8 +39,6 @@ script:
   - npm run build
   #- aws s3 sync ./build s3://${BUCKET}/ --delete --grants read=id=${OAI}
   - aws s3 sync ./build s3://${BUCKET}/ --delete
-  on:
-    branch: master
 
 # deploy:
 #   provider: pages
