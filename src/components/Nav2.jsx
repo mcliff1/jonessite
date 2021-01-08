@@ -8,7 +8,7 @@ class Navigation extends Component {
       <div>
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <NavLink className="navbar-brand" to="/">Jones Logistic</NavLink>
+        <NavLink className="navbar-brand" to="/">Jones Logistics</NavLink>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

@@ -9,7 +9,7 @@ class Navigation extends Component {
       <div>
     <header>
       <Navbar className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <NavLink className="navbar-brand" to="/">Jones Logistic</NavLink>
+        <NavLink className="navbar-brand" to="/">Jones Logistics</NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
