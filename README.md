@@ -6,6 +6,8 @@ In Progress: using bootstrap Albumn/Carousel template to model some styling
 
 ## To Publish to GH Pages
 
+2021-01-07 - currently this doesnt run;  to-do make it trigger on commit or special tag
+
 Create Travis CI file
 
 **Node Changes**
@@ -15,7 +17,7 @@ Create Travis CI file
   - *predeploy: npm run build*
   - *deploy: gh-pages -d build*
 
-
+## To Publish to S3 (single env on master commit)
 For Travis CI to build to S3 static site
 1. Add *AWS_ACCESS_KEY_ID* and *AWS_SECRET_ACCESS_KEY* from User Access Key to Travis CI project settings
 2. expects to deploy to a specific AWS Account/Region where an expected Stack is already deployed

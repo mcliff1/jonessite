@@ -29,6 +29,7 @@ install:
 script:
   # pull from Outputs[] where OutputKey = outputbucket or all expoerts for jonessite-bucket
   - *setup_role
+  - echo "Begin Deployment for S3 artifacts"
   - STACK_NAME=jonessite
   - BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)
   - OAI=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputoai`].OutputValue' --output text)
@@ -38,6 +39,8 @@ script:
   - npm run build
   #- aws s3 sync ./build s3://${BUCKET}/ --delete --grants read=id=${OAI}
   - aws s3 sync ./build s3://${BUCKET}/ --delete
+  on:
+    branch: master
 
 # deploy:
 #   provider: pages
