@@ -57,7 +57,7 @@ function About() {
                 <h2>Special Projects</h2>
                 <p>Moving of Flying Dog Brewery from Colorado to Maryland, high rise construction project delivery throughout the United States, heavy haul equipment moves to Fairbanks, Alaska. </p>
                 <Button className="btn btn-primary"
-                  aria-expanded={open-service} aria-controls="text1-panel"
+                  aria-expanded={open2} aria-controls="text1-panel"
                   onClick={() => setOpen2(!open2)}>
                   View details &raquo;
                 </Button>
@@ -67,7 +67,7 @@ function About() {
                 <h2>Service</h2>
                 <p>Our combination of being with a well leveraged company and high level technology built by Priority 1 Inc making it easy to do business.</p>
                   <Button className="btn btn-primary"
-                    aria-expanded={open-service} aria-controls="text1-panel"
+                    aria-expanded={open3} aria-controls="text1-panel"
                     onClick={() => setOpen3(!open3)}>
                     View details &raquo;
                   </Button>
