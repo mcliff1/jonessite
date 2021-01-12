@@ -18,7 +18,6 @@ install:
   - ROLE_ARN="arn:aws:iam::220065781146:role/security-gitlabdeployroleF3E0B6EA-13ION3CFTS408"
   #- KST=($(aws sts assume-role --role-arn $ROLE_ARN --role-session-name "gitlab-ci-${CI_COMMIT_SHA}" --query '[Credentials.AccessKeyId, Credentials.SecretAccessKey, Credentials.SessionToken]' --output text))
   - KST=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name "gitlab-ci-${CI_COMMIT_SHA}" )
-  - echo $KST
   - export AWS_ACCESS_KEY_ID=$(echo $KST| jq -r '.Credentials.AccessKeyId')
   - export AWS_SECRET_ACCESS_KEY=$(echo $KST| jq -r '.Credentials.SecretAccessKey')
   - export AWS_SESSION_TOKEN=$(echo $KST| jq -r '.Credentials.SessionToken')
