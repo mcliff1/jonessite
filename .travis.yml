@@ -38,7 +38,8 @@ script:
   - aws sts get-caller-identity
   - npm run build
   #- aws s3 sync ./build s3://${BUCKET}/ --delete --grants read=id=${OAI}
-  - aws s3 sync ./build s3://${BUCKET}/ --delete
+  - aws s3 sync build/ s3://${BUCKET}/ --delete
+  - aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
 
 # deploy:
 #   provider: pages
