@@ -4,6 +4,11 @@ node_js:
 branches:
   only:
     - master
+    - /^release\/.*$/
+
+variables:
+  AWS_ENV: mccsbx # this should be used to look up SVC_ROLE_{AWS_ENV}_ARN variable from protect
+                  # which points to the ROLE_ARN below
 
 cache:
   directories:
@@ -15,7 +20,8 @@ install:
 .setup_role_script: &setup_role
   - echo "============== SETUP ASSUME ROLE =============="
   - aws sts get-caller-identity
-  - ROLE_ARN="arn:aws:iam::220065781146:role/security-gitlabdeployroleF3E0B6EA-13ION3CFTS408"
+  - ROLE_ARN_VAR="SVC_ROLE_${AWS_ENV}_ARN"
+  - ROLE_ARN=${!ROLE_ARN_VAR}
   #- KST=($(aws sts assume-role --role-arn $ROLE_ARN --role-session-name "gitlab-ci-${CI_COMMIT_SHA}" --query '[Credentials.AccessKeyId, Credentials.SecretAccessKey, Credentials.SessionToken]' --output text))
   - KST=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name "gitlab-ci-${CI_COMMIT_SHA}" )
   - export AWS_ACCESS_KEY_ID=$(echo $KST| jq -r '.Credentials.AccessKeyId')
