@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6125ade3.chunk.css",
+    "main.js": "/static/js/main.37a5348e.chunk.js",
+    "main.js.map": "/static/js/main.37a5348e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7411fd4a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7411fd4a.js.map",
+    "static/css/2.95258f03.chunk.css": "/static/css/2.95258f03.chunk.css",
+    "static/js/2.c58acaed.chunk.js": "/static/js/2.c58acaed.chunk.js",
+    "static/js/2.c58acaed.chunk.js.map": "/static/js/2.c58acaed.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ed854ee8d394f78544a82748a4ead8b0.js": "/precache-manifest.ed854ee8d394f78544a82748a4ead8b0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.95258f03.chunk.css.map": "/static/css/2.95258f03.chunk.css.map",
+    "static/css/main.6125ade3.chunk.css.map": "/static/css/main.6125ade3.chunk.css.map",
+    "static/js/2.c58acaed.chunk.js.LICENSE.txt": "/static/js/2.c58acaed.chunk.js.LICENSE.txt",
+    "static/media/Fleetwood160x160.jpg": "/static/media/Fleetwood160x160.3024ad25.jpg",
+    "static/media/TruckMountain_small.jpg": "/static/media/TruckMountain_small.b6823fa5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7411fd4a.js",
+    "static/css/2.95258f03.chunk.css",
+    "static/js/2.c58acaed.chunk.js",
+    "static/css/main.6125ade3.chunk.css",
+    "static/js/main.37a5348e.chunk.js"
+  ]
+}
