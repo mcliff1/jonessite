@@ -5,6 +5,7 @@ import './App.css';
 import Navigation from './components/Nav3';
 import About from './components/About2';
 import Contact from './components/Contact';
+import { NavLink } from 'react-router-dom';
 
 
 function App() {
@@ -23,8 +24,8 @@ function App() {
 
         <footer className="container">
           <p className="float-right"><a href="/#">Back to top</a></p>
-          <p>&copy; 2017-2021 Jones Logistics, Inc &middot; <a href="https://www.truckingcolorado.com/contact">Contact</a>
-           &middot; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
+          <p>&copy; 2017-2022 Jones Logistics, Inc &nbsp;&middot;&nbsp; <NavLink to="/contact">Contact</NavLink>
+           &nbsp;&middot;&nbsp; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
           </p>
         </footer>
       </Router>
