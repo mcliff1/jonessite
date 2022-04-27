@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87ed47f73f4a921225adab45d42f4b47",
+    "revision": "55aa98e84e084b56d49e20c62f616e29",
     "url": "https://mcliff1.github.io/jonessite/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://mcliff1.github.io/jonessite/static/css/2.95258f03.chunk.css"
   },
   {
-    "revision": "e4c5a285b8f05d20992f",
+    "revision": "29b2e71c3cf75a1bbd8d",
     "url": "https://mcliff1.github.io/jonessite/static/css/main.6125ade3.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://mcliff1.github.io/jonessite/static/js/2.c58acaed.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e4c5a285b8f05d20992f",
-    "url": "https://mcliff1.github.io/jonessite/static/js/main.40d672a2.chunk.js"
+    "revision": "29b2e71c3cf75a1bbd8d",
+    "url": "https://mcliff1.github.io/jonessite/static/js/main.2e39551f.chunk.js"
   },
   {
     "revision": "c997c74b9b8d4710e8e5",
