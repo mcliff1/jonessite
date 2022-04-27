@@ -19,6 +19,10 @@ jobs:
         registry-url: https://registry.npmjs.org/
 
     - name: deploy
-      run: |
-        yarn
-        npm run deploy
+      # run: |
+      #   yarn
+      #   npm run deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
