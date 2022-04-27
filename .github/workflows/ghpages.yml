@@ -21,7 +21,7 @@ jobs:
     - name: Build Project
       run: |
         npm ci
-        npm run build
+        PUBLIC_URL=https://mcliff1.github.io/jonessite/ npm run build
 
     - name: run tests
       run: npm run test
