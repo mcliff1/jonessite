@@ -13,7 +13,11 @@ name: AWS Publish
 #       - release/dev
 #   push:
 #     - feature/*
-on: [push]
+#on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
 
