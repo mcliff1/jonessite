@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
   steps:
-    - name: checkout code
-      uses: actions/checkout@v2
+  - name: checkout code
+    uses: actions/checkout@v2
 
-    - name: publish package
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-        registry-url: https://registry.npmjs.org/
-      run: |
-        yarn
-        npm run deploy
+  - name: publish package
+    uses: actions/setup-node@v1
+    with:
+      node-version: 12
+      registry-url: https://registry.npmjs.org/
+    run: |
+      yarn
+      npm run deploy
