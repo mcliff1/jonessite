@@ -60,9 +60,11 @@ jobs:
         run: |
           ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
           echo $ACCOUNT_NAME
+          STACK_NAME=jonessite
           BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)
           #BUCKET=$(aws ssm get-parameter --name /app/cdn/${ACCOUNT_NAME}-cliffconsulting/bucket --query 'Parameter.Value' --output text)
           echo $BUCKET
+          #OAI=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputoai`].OutputValue' --output text)
           npm install
           npm run build
           aws s3 sync ./build s3://${BUCKET}/ --delete
