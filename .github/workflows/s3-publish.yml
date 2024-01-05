@@ -82,4 +82,18 @@ jobs:
           aws s3 sync ./build s3://${BUCKET}/ --delete
           #aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
 
-        if: ${{ github.ref == 'refs/heads/release/dev' || github.ref == 'refs/heads/master' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
+
+      - name: Build And Deploy in Test
+        run: |
+          ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
+          echo $ACCOUNT_NAME
+          STACK_NAME=mccsbx-jonessite
+          BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)
+          echo $BUCKET
+          npm install
+          npm run build
+          aws s3 sync ./build s3://${BUCKET}/ --delete
+          #aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
+
+        if: ${{ github.ref == 'refs/heads/release/dev' }}
