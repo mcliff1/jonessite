@@ -86,6 +86,7 @@ jobs:
 
       - name: Build And Deploy in Test
         run: |
+          echo "Try Me"
           ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
           echo $ACCOUNT_NAME
           STACK_NAME=mccsbx-jonessite
