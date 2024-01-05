@@ -1,6 +1,6 @@
 {
   "name": "jonessite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://jonessite.mattcliff.net/",
   "dependencies": {
@@ -8,7 +8,6 @@
     "eslint-plugin-flowtype": "^3.13.0",
     "jquery": "^3.5.0",
     "minimist": "^1.2.6",
-    "npm": "^9.2.0",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.11.0",
@@ -25,9 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.1"
   }
 }
