@@ -18,6 +18,7 @@ on:
   push:
     branches:
       - master
+      - release/dev
 
 jobs:
 
@@ -27,13 +28,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [15.x, 16.x]
+        node-version: [16.x, 18.x, 20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
@@ -46,11 +47,11 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
       - name: Configuration for Production
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -59,20 +60,43 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           role-duration-seconds: 1800
 
+      - name: Configuration for Test
+        uses: aws-actions/configure-aws-credentials@v2
+        if: ${{ github.ref == 'refs/heads/release/dev' }}
+        with:
+          aws-access-key-id: ${{ secrets.TEST_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.TEST_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.TEST_AWS_ROLE_ARN }}
+          role-duration-seconds: 1800
 
       - name: Build And Deploy
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: |
           ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
           echo $ACCOUNT_NAME
           STACK_NAME=jonessite
           BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)
-          #BUCKET=$(aws ssm get-parameter --name /app/cdn/${ACCOUNT_NAME}-cliffconsulting/bucket --query 'Parameter.Value' --output text)
           echo $BUCKET
-          #OAI=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputoai`].OutputValue' --output text)
           npm install
           npm run build
           aws s3 sync ./build s3://${BUCKET}/ --delete
-          #aws s3 sync build/ s3://${BUCKET}/ --delete
           #aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
 
-        if: ${{ github.ref == 'refs/heads/release/dev' || github.ref == 'refs/heads/master' }}
+
+      - name: Build And Deploy in Test
+        if: ${{ github.ref == 'refs/heads/release/dev' }}
+        run: |
+          echo "Try Me"
+          aws sts get-caller-identity
+          echo "again"
+          ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
+          echo $ACCOUNT_NAME
+          STACK_NAME=mccsbx-jonessite
+          BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)
+          echo $BUCKET
+          npm install
+          npm run build
+          aws s3 sync ./build s3://${BUCKET}/ --delete
+          #aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
+
