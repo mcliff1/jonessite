@@ -37,6 +37,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+      env:
+        NODE_OPTIONS: --openssl-legacy-provider
     - run: npm test
 
   deploy:
@@ -93,6 +95,4 @@ jobs:
           npm run build
           aws s3 sync ./build s3://${BUCKET}/ --delete
           aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
 
