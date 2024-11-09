@@ -33,7 +33,7 @@
     ]
   },
   "devDependencies": {
-    "postcss": "^8.4.31",
-    "react-scripts": "^5.0.1"
+    "postcss": "^8.4.47",
+    "react-scripts": "^3.0.1"
   }
 }
