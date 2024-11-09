@@ -22,7 +22,7 @@ Create Travis CI file
 
 ## To Publish to S3 (single env on master commit)
 
-Deployed to [TruckingColorado.com](https://www.truckingcolorado.com/)
+Deployed to [TruckingColorado.com](https://www.truckingcolorado.com/) for Production or [mccsbx-truckingcolorado](https://truckingcolorado.mattcliff.net/)
 
 For Travis CI to build to S3 static site
 1. Add *AWS_ACCESS_KEY_ID* and *AWS_SECRET_ACCESS_KEY* from User Access Key to Travis CI project settings

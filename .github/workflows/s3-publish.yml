@@ -21,9 +21,7 @@ on:
       - release/dev
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     strategy:

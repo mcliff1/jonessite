@@ -1,0 +1,26 @@
+{
+    "name": "Jones Site Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18",
+    "runArgs": [
+        "--privileged"
+    ],
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3001
+    ],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "workspaceFolder": "/workspace"
+}
