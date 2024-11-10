@@ -79,6 +79,8 @@ jobs:
       - name: Build And Deploy
         if: ${{ github.ref == 'refs/heads/master' }}
         run: |
+          node -v
+          aws sts get-caller-identity
           ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
           echo $ACCOUNT_NAME
           STACK_NAME=jonessite
@@ -88,6 +90,7 @@ jobs:
           npm run build
           aws s3 sync ./build s3://${BUCKET}/ --delete
           aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
+          aws cloudfront create-invalidation --distribution-id E3YBYY7UWYBQZ --paths "/*"
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
@@ -95,6 +98,7 @@ jobs:
       - name: Build And Deploy in Test
         if: ${{ github.ref == 'refs/heads/release/dev' }}
         run: |
+          aws sts get-caller-identity
           node -v
           ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
           STACK_NAME=mccsbx-jonessite
@@ -104,6 +108,7 @@ jobs:
           npm run build
           aws s3 sync ./build s3://${BUCKET}/ --delete
           aws s3 cp build/index.html s3://${BUCKET}/index.html --metadata-directive REPLACE --cache-control no-cache,no-store,max-age=0
+          aws cloudfront create-invalidation --distribution-id E36ETR5FS98PUE --paths "/*"
         env:
           NODE_OPTIONS: --openssl-legacy-provider
 
