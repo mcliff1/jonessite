@@ -30,3 +30,10 @@ For Travis CI to build to S3 static site
 
 
 [![Build Status](https://travis-ci.org/mcliff1/jonessite.svg?branch=master)](https://travis-ci.org/mcliff1/jonessite)
+
+
+# Release Notes
+
+Date | Comment
+---|---
+2024-11-09|Updated to Nodejs18, React 18

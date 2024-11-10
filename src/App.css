@@ -36,7 +36,7 @@ ul.header li {
 }
 
 ul.header li a {
-  //color: yellow;
+  /* color: yellow; */
   font-weight: bold;
   text-decoration: none;
   padding: 20px;

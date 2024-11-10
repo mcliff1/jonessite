@@ -9,7 +9,7 @@ class Contact extends Component {
         <div className="row">
         <div className="col">
         <div className="border border-info rounded">
-          <b>Let’s discuss your transportation needs today!</b>
+          <b>Let's discuss your transportation needs today!</b>
           <div>
           <p>Chad Hubble</p>
   <p><a href="mailto:chubble@priority1inc.net" target="_blank" rel="noopener noreferrer" className="btn btn-primary">chubble@priority1inc.net</a></p>

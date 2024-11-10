@@ -1,17 +1,17 @@
 {
   "name": "jonessite",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "homepage": "https://jonessite.mattcliff.net/",
   "author": "Matt Cliff",
   "description": "Web Site for Chad Hubble Priority One Logistics",
   "dependencies": {
-    "bootstrap": "^5.3.2",
-    "react": "^18.2.0",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.1",
-    "reactstrap": "^9.2.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "reactstrap": "^9.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
