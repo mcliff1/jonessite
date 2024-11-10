@@ -26,7 +26,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [ 22.x ] # [18.x, 20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -48,6 +48,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+
+      - name: Setup Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
 
       # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
       - name: Configuration for Production
@@ -89,6 +95,7 @@ jobs:
       - name: Build And Deploy in Test
         if: ${{ github.ref == 'refs/heads/release/dev' }}
         run: |
+          node -v
           ACCOUNT_NAME=$(aws ssm get-parameter --name /foundation/account/name --query 'Parameter.Value' --output text)
           STACK_NAME=mccsbx-jonessite
           BUCKET=$(aws cloudformation --region us-east-1 describe-stacks --stack-name ${STACK_NAME} --query 'Stacks[0].Outputs[?OutputKey==`outputbucket`].OutputValue' --output text)

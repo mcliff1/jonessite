@@ -24,7 +24,7 @@ function App() {
 
         <footer className="container">
           <p className="float-right"><a href="/#">Back to top</a></p>
-          <p>&copy; 2017-2024 Jones Logistics, Inc &nbsp;&middot;&nbsp; <NavLink to="/contact">Contact</NavLink>
+          <p>&copy; 2017 - 2024 Jones Logistics, Inc &nbsp;&middot;&nbsp; <NavLink to="/contact">Contact</NavLink>
            &nbsp;&middot;&nbsp; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
           </p>
         </footer>
