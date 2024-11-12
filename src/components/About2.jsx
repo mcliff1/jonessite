@@ -46,7 +46,7 @@ function About() {
             <div className="row">
               <div className="col-md-4">
                 <h2>Experience</h2>
-                <p>Our team over 50 years of combined experience in working freight throughout the United States.</p>
+                <p>Our team has over 50 years of combined experience in working freight throughout the United States.</p>
                 <p>Top 25 Priority 1 Inc Agency 4 years running. Preferred provider for several Colorado Breweries.</p>
                 <Button className="btn btn-primary"
                   aria-expanded={open} aria-controls="text1-panel"
