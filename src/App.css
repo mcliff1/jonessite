@@ -26,8 +26,9 @@ body {
   height: 32rem;
 }
 
-
-
+.navbar-brand {
+  padding-left: 20px;
+}
 
 ul.header li {
   display: inline;
