@@ -10,7 +10,7 @@
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^6.28.0",
+    "react-router-dom": "^7.1.1",
     "reactstrap": "^9.2.3"
   },
   "scripts": {
