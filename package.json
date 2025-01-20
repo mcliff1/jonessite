@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "react-scripts": "^5.0.1"
   }
 }
