@@ -1,0 +1,29 @@
+name: Coverage Badge
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+permissions:
+  contents: write
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm test -- --coverage --watchAll=false
+      - run: npx coverage-badges --output badges
+      - name: Commit coverage badge
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add badges/coverage.svg || true
+          git commit -m "Update coverage badge" || echo "No changes to commit"
+          git push || echo "No changes to push"

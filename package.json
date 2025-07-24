@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "coverage-badges-cli": "^2.1.0",
     "postcss": "^8.5.3",
     "react-scripts": "^5.0.1"
   }
