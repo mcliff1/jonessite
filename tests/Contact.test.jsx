@@ -19,7 +19,7 @@ describe('Contact Component', () => {
 
   it('displays phone numbers', () => {
     render(<Contact />);
-    expect(screen.getByText('303-667-9595 direct')).toBeInTheDocument();
-    expect(screen.getByText('303-847-8919 direct')).toBeInTheDocument();
+    expect(screen.getByText('303-667-9595 (direct)')).toBeInTheDocument();
+    expect(screen.getByText('303-847-8919 (direct)')).toBeInTheDocument();
   });
 });
