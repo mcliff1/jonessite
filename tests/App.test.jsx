@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { App } from '../src/App';
 import Contact from '../src/components/Contact';
-import About from '../src/components/About2';
+import About from '../src/components/About3';
 
 describe('App Component', () => {
   const renderApp = () => {
@@ -16,7 +16,10 @@ describe('App Component', () => {
 
   it('renders without crashing', async () => {
     renderApp();
-    expect(screen.getByText(/Jones Logistics Corp/i)).toBeInTheDocument();
+    // Navbar brand or hero heading should be present
+    expect(
+      screen.getByRole('link', { name: /jones logistics/i })
+    ).toBeInTheDocument();
   });
 
   it('has working navigation links', () => {
@@ -42,7 +45,9 @@ describe('App Component', () => {
         </Routes>
       </MemoryRouter>
     );
-    expect(screen.getByText(/Our team has over 50 years/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /welcome to jones logistics/i })
+    ).toBeInTheDocument();
   });
 
   it('renders contact page at /contact path', () => {
@@ -54,6 +59,6 @@ describe('App Component', () => {
         </Routes>
       </MemoryRouter>
     );
-    expect(screen.getByText(/Let's discuss your transportation needs/i)).toBeInTheDocument();
+    expect(screen.getByText(/Let's discuss/i)).toBeInTheDocument();
   });
 });

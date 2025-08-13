@@ -1,34 +1,63 @@
-import React, { Component } from 'react';
-import InlineImage from '../images/TruckMountain_small.jpg';
+import React from 'react';
+import TruckMountain from '../images/TruckMountain_small.jpg';
+import FleetwoodLogo from '../images/Fleetwood160x160.jpg';
 
-class Contact extends Component {
-  render() {
-    return (
-      <div  className="container fluid">
-        <h2>Contact Us</h2>
-        <div className="row">
-        <div className="col">
-        <div className="border border-info rounded">
-          <b>Let's discuss your transportation needs today!</b>
-          <div>
-          <p>Chad Hubble</p>
-  <p><a href="mailto:chubble@priority1inc.net" target="_blank" rel="noopener noreferrer" className="btn btn-primary">chubble@priority1inc.net</a></p>
-  <p><a href="mailto:chad.hubble@gmail.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">chad.hubble@gmail.com</a></p>
-  <p><a href="tel:3036679595" className="phone">303-667-9595 direct</a></p>
+const Contact = () => {
+  return (
+    <div className="contact-container">
+      <div className="contact-hero">
+        <img src={TruckMountain} alt="Truck in the mountains" className="hero-image" />
+        <div className="hero-content">
+          <img src={FleetwoodLogo} alt="Jones Logistics" className="company-logo" />
+          <h1 className="hero-title">Contact Us</h1>
+          <p className="hero-subtitle">
+            Let's discuss how Jones Logistics, a Priority 1 Inc. agency, can optimize 
+            your transportation and logistics needs with our decades of experience.
+          </p>
+        </div>
+      </div>
+
+      <div className="contact-content">
+        <div className="contact-cards">
+          <div className="contact-card">
+            <h3>Chad Hubble</h3>
+            <div className="contact-links">
+              <a href="mailto:chubble@priority1inc.net" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary">
+                chubble@priority1inc.net
+              </a>
+              <a href="mailto:chad.hubble@gmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary">
+                chad.hubble@gmail.com
+              </a>
+              <a href="tel:3036679595" className="phone">
+                303-667-9595 (direct)
+              </a>
+            </div>
           </div>
-          <div>
-          <p>Hayden Bellamy</p>
-  <p><a href="mailto:hayden.bellamy@priority1inc.net" target="_blank" rel="noopener noreferrer" className="btn btn-primary">hayden.bellamy@priority1inc.net</a></p>
-  <p><a href="tel:3038478919" className="phone">303-847-8919 direct</a></p>
+
+          <div className="contact-card">
+            <h3>Hayden Bellamy</h3>
+            <div className="contact-links">
+              <a href="mailto:hayden.bellamy@priority1inc.net" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary">
+                hayden.bellamy@priority1inc.net
+              </a>
+              <a href="tel:3038478919" className="phone">
+                303-847-8919 (direct)
+              </a>
+            </div>
           </div>
         </div>
       </div>
-        <div className="col"><img src={InlineImage} alt="Trucking Logistics"></img></div>
-      </div>
     </div>
-    );
-  }
-
-}
+  );
+};
 
 export default Contact;

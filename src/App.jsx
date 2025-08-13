@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import Navigation from './components/Nav3';
-import About from './components/About2';
+import About from './components/About3';
 import Contact from './components/Contact';
 import { NavLink } from 'react-router-dom';
 
