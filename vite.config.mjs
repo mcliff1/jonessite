@@ -25,11 +25,13 @@ export default defineConfig({
     setupFiles: ['./tests/setup.js'],
     include: ['tests/**/*.{test,spec}.{js,jsx}'],
     coverage: {
-      reporter: ['text', 'json', 'html'],
+      provider: 'v8',
+      reporter: ['text', 'json', 'html', 'lcov'],
       exclude: [
         'node_modules/',
         'tests/setup.js',
       ],
+      reportsDirectory: './coverage',
     },
   }
 });
