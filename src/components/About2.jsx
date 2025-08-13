@@ -1,6 +1,6 @@
 //import React, { Component } from 'react';
 import React from 'react';
-import { Button, Collapse } from 'react-bootstrap';
+import { Tabs, Tab, Button } from 'react-bootstrap';
 import InlineImage from '../images/Fleetwood160x160.jpg';
 //import BannerImage from '../branding/bw_logo.png';
 
@@ -16,9 +16,7 @@ import InlineImage from '../images/Fleetwood160x160.jpg';
     // render() {
 
 function About() {
-  const [open, setOpen] = React.useState(false);
-  const [open2, setOpen2] = React.useState(false);
-  const [open3, setOpen3] = React.useState(false);
+  const [activeTab, setActiveTab] = React.useState('experience');
     //const { open } = this.open;
     //const setOpen = open => this.setOpen(open);
     //const setOpen = open => this.open;
