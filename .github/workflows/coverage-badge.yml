@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm test -- --coverage --watchAll=false
+      - run: npm test -- --coverage --watch=false
       - run: npx coverage-badges --output badges
       - name: Commit coverage badge
         run: |
