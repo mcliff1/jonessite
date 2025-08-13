@@ -32,11 +32,11 @@ class ErrorBoundary extends Component {
 
 function App() {
   return (
-    <div className="container">
+    <div className="page-wrapper">
       <ErrorBoundary>
         <Navigation />
-        <main role="main">
-          <div>
+        <main role="main" className="main-content">
+          <div className="container">
             <Routes>
               <Route path="/" element={<About />} />
               <Route path="/contact" element={<Contact />} />
@@ -44,11 +44,21 @@ function App() {
           </div>
         </main>
 
-        <footer className="container">
-          <p className="float-right"><a href="/#">Back to top</a></p>
-          <p>&copy; 2017 - 2025 Jones Logistics, Inc &nbsp;&middot;&nbsp; <NavLink to="/contact">Contact</NavLink>
-           &nbsp;&middot;&nbsp; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
-          </p>
+        <footer>
+          <div className="container">
+            <div className="footer-content">
+              <p>
+                <a href="/#" className="back-to-top">Back to top</a>
+              </p>
+              <p className="footer-links">
+                &copy; 2017 - 2025 Jones Logistics, Inc
+                <span className="separator">&middot;</span>
+                <NavLink to="/contact">Contact</NavLink>
+                <span className="separator">&middot;</span>
+                <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
+              </p>
+            </div>
+          </div>
         </footer>
       </ErrorBoundary>
     </div>
