@@ -1,8 +1,8 @@
 {
   "name": "jonessite",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
-  "homepage": "https://jonessite.mattcliff.net/",
+  "homepage": "https://www.truckingcolorado.com/",
   "author": "Matt Cliff",
   "description": "Web Site for Chad Hubble Priority One Logistics",
   "dependencies": {
@@ -14,10 +14,12 @@
     "reactstrap": "^9.2.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,9 +37,15 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "coverage-badges-cli": "^2.1.0",
+    "jsdom": "^26.1.0",
     "postcss": "^8.5.3",
-    "react-scripts": "^5.0.1"
+    "vite": "^5.4.0",
+    "vitest": "^3.2.4"
   }
 }

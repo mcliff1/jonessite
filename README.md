@@ -6,6 +6,9 @@ In Progress: using bootstrap Album/Carousel template to model some styling
 
 ## Code Coverage Badge
 
+![Coverage](badges/coverage.svg)
+
+
 This repository automatically generates and updates a local code coverage badge every time you push to `master` or `main`.
 
 **Setup is automatic!**

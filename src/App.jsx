@@ -33,30 +33,35 @@ class ErrorBoundary extends Component {
 function App() {
   return (
     <div className="container">
-      <Router>
-        <ErrorBoundary>
-          <Navigation />
-          <main role="main">
-
-            <div>
+      <ErrorBoundary>
+        <Navigation />
+        <main role="main">
+          <div>
             <Routes>
               <Route path="/" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-            </div>
+          </div>
+        </main>
 
-          </main>
-
-          <footer className="container">
-            <p className="float-right"><a href="/#">Back to top</a></p>
-            <p>&copy; 2017 - 2025 Jones Logistics, Inc &nbsp;&middot;&nbsp; <NavLink to="/contact">Contact</NavLink>
-             &nbsp;&middot;&nbsp; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
-            </p>
-          </footer>
-        </ErrorBoundary>
-      </Router>
+        <footer className="container">
+          <p className="float-right"><a href="/#">Back to top</a></p>
+          <p>&copy; 2017 - 2025 Jones Logistics, Inc &nbsp;&middot;&nbsp; <NavLink to="/contact">Contact</NavLink>
+           &nbsp;&middot;&nbsp; <a href="https://www.truckingcolorado.com/">www.truckingcolorado.com</a>
+          </p>
+        </footer>
+      </ErrorBoundary>
     </div>
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export { App };
+export default AppWrapper;
