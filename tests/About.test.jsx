@@ -1,24 +1,40 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import About from '../src/components/About2';
+import userEvent from '@testing-library/user-event';
+import About from '../src/components/About3';
 
-describe('About Component', () => {
-  it('renders main headings', () => {
+describe('About Component (About3)', () => {
+  it('renders hero and services headings', () => {
     render(<About />);
-    expect(screen.getByText('Jones Logistics')).toBeInTheDocument();
-    expect(screen.getByText('Experience')).toBeInTheDocument();
-    expect(screen.getByText('Special Projects')).toBeInTheDocument();
-    expect(screen.getByText('Service')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /welcome to jones logistics/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /our services/i })
+    ).toBeInTheDocument();
   });
 
-  it('displays company description', () => {
+  it('shows company description in hero', () => {
     render(<About />);
-    expect(screen.getByText(/Jones Logistics Corp is an agency owned by Chad Hubble/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/priority 1, inc\./i)
+    ).toBeInTheDocument();
   });
 
-  it('has View details buttons', () => {
+  it('renders service tabs and switches content', async () => {
+    const user = userEvent.setup();
     render(<About />);
-    const buttons = screen.getAllByText('View details »');
-    expect(buttons).toHaveLength(3);
+
+    // Tabs are rendered as role="tab"
+    expect(screen.getByRole('tab', { name: /experience/i })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /special projects/i })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /services/i })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /warehousing/i })).toBeInTheDocument();
+
+    // Switch to Special Projects and assert section heading appears
+    await user.click(screen.getByRole('tab', { name: /special projects/i }));
+    expect(
+      screen.getByRole('heading', { name: /special projects/i })
+    ).toBeInTheDocument();
   });
 });
