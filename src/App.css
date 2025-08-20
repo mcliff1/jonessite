@@ -315,13 +315,14 @@ footer p {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 440px; /* Smaller fixed height on mobile */
+  height: auto; /* Allow hero to grow with content on mobile */
+  min-height: 520px; /* Ensure enough space to avoid truncation */
     padding: 2rem 0;
   }
   
   .hero-section-compact {
-    height: auto; /* Only make Contact page flexible */
-    min-height: 300px; /* Minimum height for Contact page */
+  height: auto; /* Only make Contact page flexible */
+  min-height: 380px; /* Increased minimum height for Contact page to fit content */
     padding: 2rem 0;
     margin-bottom: 1.5rem;
   }
