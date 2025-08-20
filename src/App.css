@@ -315,7 +315,8 @@ footer p {
 
 @media (max-width: 768px) {
   .hero-section {
-  height: 520px; /* Increased fixed height on mobile to prevent text truncation */
+  height: auto; /* Allow hero to grow with content on mobile */
+  min-height: 520px; /* Ensure enough space to avoid truncation */
     padding: 2rem 0;
   }
   
