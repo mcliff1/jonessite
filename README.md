@@ -61,5 +61,6 @@ For Travis CI to build to S3 static site
 
 Date | Comment
 ---|---
+2025-08-20|Added two additional contacts to Contact page: Cierra Chambers and Josh Smith. Updated page layout to be more compact with logo positioned beside title.
 2024-11-09|Update to Nodejs22, React 18
 2024-11-09|Updated to Nodejs18, React 18

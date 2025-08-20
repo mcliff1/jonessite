@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import About from '../src/components/About3';
+import About from '../src/components/About';
 
-describe('About Component (About3)', () => {
+describe('About Component', () => {
   it('renders hero and services headings', () => {
     render(<About />);
     expect(

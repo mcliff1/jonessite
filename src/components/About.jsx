@@ -1,90 +1,93 @@
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
-import InlineImage from '../images/Fleetwood160x160.jpg';
-//import BannerImage from '../branding/bw_logo.png';
+import React, { useState } from 'react';
+import { Tabs, Tab } from 'react-bootstrap';
+import '../App.css';
+import FleetwoodLogo from '../images/Fleetwood160x160.jpg';
+import TruckMountain from '../images/TruckMountain_small.jpg';
 
-//import Album from './Album'
-//import Carousel from './Carousel'
-//import MyCarousel from './MyCarousel'
-// <img src={BannerImage} alt="Jones Logistics Trucking"></img>
+const About = () => {
+    const [activeTab, setActiveTab] = useState('experience');
 
-class About extends Component {
-    open = false;
-
-
-    render() {
-
-    //const [open, setOpen] = React.useState(false);
-    const { open } = this.open;
-    //const setOpen = open => this.setOpen(open);
-    const setOpen = open => this.open;
-    console.log('setOpen: open:' + open)
     return (
-      <div className="container-fluid">
-        <div className="jumbotron">
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <h1 className="display-3">Jones Logistics</h1>
-                <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc.</p>
-              </div>
-              <div className="col-xs">
-                <img src={InlineImage} alt="Jones Logistics Trucking"></img>
-              </div>
+        <div className="about-container">
+            <div className="hero-section">
+                <img src={TruckMountain} alt="Truck in the mountains" className="hero-image" />
+                <div className="hero-content">
+                    <img src={FleetwoodLogo} alt="Jones Logistics" className="company-logo" />
+                    <h1 className="hero-title">Welcome to Jones Logistics</h1>
+                    <p className="hero-subtitle">
+                        As an agency operating under Priority 1, Inc., we bring over 50 years of combined experience 
+                        in freight logistics across the United States. Our team consistently delivers reliable, 
+                        efficient solutions for all your transportation needs.
+                    </p>
+                </div>
             </div>
-          </div>
+            
+            <div className="services-container">
+                <h1>Our Services</h1>
+                <Tabs
+                activeKey={activeTab}
+                onSelect={(k) => setActiveTab(k)}
+                className="services-tabs"
+                fill
+            >
+                <Tab eventKey="experience" title="Experience">
+                    <div className="service-content">
+                        <h2>Industry Experience</h2>
+                        <div className="service-details">
+                            <p>
+                                Our team brings over 50 years of combined experience in freight logistics throughout the United States. 
+                                As a Top 25 Priority 1 Inc Agency for 4 years running, we've established ourselves as a preferred 
+                                provider for several Colorado Breweries and maintain excellent relationships with clients across various industries.
+                            </p>
+                        </div>
+                    </div>
+                </Tab>
+
+                <Tab eventKey="projects" title="Special Projects">
+                    <div className="service-content">
+                        <h2>Special Projects</h2>
+                        <div className="service-details">
+                            <p>
+                                We specialize in handling complex logistics projects, including the relocation of Flying Dog Brewery 
+                                from Colorado to Maryland, high-rise construction project deliveries throughout the United States, 
+                                and heavy haul equipment moves to Fairbanks, Alaska. Our expertise in coordinating specialized 
+                                freight ensures successful project completion.
+                            </p>
+                        </div>
+                    </div>
+                </Tab>
+
+                <Tab eventKey="services" title="Services">
+                    <div className="service-content">
+                        <h2>Comprehensive Freight Solutions</h2>
+                        <div className="service-details">
+                            <p>
+                                We handle all types of freight including less than truckload, flatbed, van, refrigerated, and 
+                                expedited shipments. Leveraging Priority 1 Inc's advanced technology platform, we provide 
+                                cost-effective solutions with real-time tracking and superior customer service. Our commitment 
+                                to quality and reliability makes us your ideal logistics partner.
+                            </p>
+                        </div>
+                    </div>
+                </Tab>
+
+                <Tab eventKey="warehousing" title="Warehousing">
+                    <div className="service-content">
+                        <h2>Warehouse Partner Services</h2>
+                        <div className="service-details">
+                            <p>
+                                We offer flexible warehousing solutions to accommodate your needs, from temporary storage 
+                                during project delays to long-term inventory management. Our experience includes handling 
+                                specialized cargo such as solar panels and brewery equipment, providing full inventory 
+                                receiving and strategic delivery scheduling to optimize your supply chain.
+                            </p>
+                        </div>
+                    </div>
+                </Tab>
+            </Tabs>
+            </div>
         </div>
-
-        <div className="container">
-            <div className="row">
-              <div className="col-md-4">
-                <h2>Experience</h2>
-                <p>Chad has over 26 years of experience handling truckload, LTL, air freight and small parcel.</p>
-                <Button className="btn btn-primary" aria-expanded={open} aria-controls="collapsePanel" onClick={() => setOpen(!open)}>
-                  View details &raquo;
-                </Button>
-              </div>
-              <div className="col-md-4">
-                <h2>Special Projects</h2>
-                <p>Moving of Flying Dog Brewery from Colorado to Maryland, high rise construction project delivery throughout the United States, heavy haul equipment moves to Fairbanks, Alaska. </p>
-                <p><a className="btn btn-secondary" href="/#" role="button">View details &raquo;</a></p>
-              </div>
-              <div className="col-md-4">
-                <h2>Service</h2>
-                <p>Our combination of being with a well leveraged company and high level technology built by Priority 1 Inc making it easy to do business.</p>
-                <p><a className="btn btn-secondary" href="/#" role="button">View details &raquo;</a></p>
-              </div>
-            </div>
-            <div className="collapse" id="collapsePanel">
-
-                      <div className="card card-body border border-primary rounted">Project freight experience - Chad oversaw, priced and handled the entire Flying Dog Brewery move from Colorado to Maryland.  We worked with Flying Dog management to price up several potential site locations strategically looking at sales numbers and what made sense from a logistics perspective.  We contracted crane services for the pickup and delivery and arranged 11 flatbed shipments that included 3 oversized shipments requiring travel escorts and permitting.   All went well and the brewery was back up and running two weeks later in the process.  Our experience in handling such specialized freight created a savings in down time and was cost effective in coordination with the costly crane services that we were able to minimize through our preparedness.
-                      </div>
-            </div>
-
-
-            <hr />
-
-          </div>
-
-
-        <div className="row border border-primary rounted">Warehouse partner services  - When RES - Renewable Energy Systems was installing a project in southern California, everything was going well until the government services created a delay with permitting of the final install.  The 40 ocean containers were already set to land in Long Beach and the demurrage cost was going to be in the thousands of dollars, RES came to Chad asking for a solution.  We established a partnership for drayage and warehouse storage of the freight and do a full inventory receiving of the 400+ solar panels for future delivery later in the summer.  Our solution again saved the client money and established a streamline of the deliveries when the facility was ready to proceed.
-        </div>
-
-    </div>
     );
-  }
-
-}
-
-//<MyCarousel />
-
-// <h2>About Us</h2>
-// <div className="row border border-primary rounded">
-//   <p>Jones Logistics Corp is an agency owned by Chad Hubble operating under Priority 1 Inc</p>
-//   <p>Chad has over 26 years of experience handling truckload, LTL, air freight and small parcel</p>
-//   <p>Special Projects include moving of Flying Dog Brewery from Colorado to Maryland, high rise construction project delivery throughout the United States, heavy haul equipment moves to Fairbanks, Alaska</p>
-//   <p>Our combination of being with a well leveraged company and high level technology built by Priority 1 Inc making it easy to do business</p>
-// </div>
-
+};
 
 export default About;

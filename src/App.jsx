@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import Navigation from './components/Nav3';
-import About from './components/About3';
+import Navigation from './components/Nav';
+import About from './components/About';
 import Contact from './components/Contact';
 import { NavLink } from 'react-router-dom';
 
