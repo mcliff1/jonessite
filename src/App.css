@@ -190,15 +190,6 @@ footer p {
   padding: 2rem;
 }
 
-.contact-hero {
-  position: relative;
-  padding: 4rem 0;
-  margin-bottom: 3rem;
-  background-color: var(--bg-overlay);
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
 .contact-content {
   position: relative;
   z-index: 2;
@@ -210,60 +201,126 @@ footer p {
 
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .contact-card {
-  background-color: var(--bg-overlay);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px var(--shadow-color);
-  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.95));
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card h3 {
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
 }
 
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .contact-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.75rem;
   text-decoration: none;
-  color: var(--text-color);
-  transition: color 0.2s ease;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-links a:hover {
-  color: var(--primary-color);
+.contact-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
-.contact-links .btn {
-  width: fit-content;
+.contact-links a:hover::before {
+  left: 100%;
+}
+
+.contact-links .btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.contact-links .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.contact-links .btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #545b62);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.contact-links .btn-secondary:hover {
+  background: linear-gradient(135deg, #545b62, #495057);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
 }
 
 .contact-links .phone {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  text-align: center;
+}
+
+.contact-links .phone:hover {
+  background: linear-gradient(135deg, #1e7e34, #155724);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  color: white;
+}
+
+.contact-links .phone::before {
+  content: "📞 ";
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
-  .contact-hero {
+  .hero-section {
+    height: 400px; /* Smaller fixed height on mobile */
     padding: 2rem 0;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
   }
   
   .contact-content {
@@ -272,6 +329,29 @@ footer p {
   
   .contact-cards {
     gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .company-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contact-links a {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -283,6 +363,10 @@ footer p {
   background-color: var(--bg-overlay);
   border-radius: 0.5rem;
   overflow: hidden;
+  height: 500px; /* Fixed height instead of min-height to prevent jumping */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
@@ -290,6 +374,9 @@ footer p {
   z-index: 2;
   color: var(--text-color);
   text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 2rem;
 }
 
 .hero-image {
@@ -299,6 +386,7 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0.3;
   z-index: 1;
 }
@@ -307,6 +395,7 @@ footer p {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 .hero-subtitle {
@@ -323,6 +412,7 @@ footer p {
   margin: 0 auto 2rem;
   border: 4px solid var(--primary-color);
   box-shadow: 0 4px 8px var(--shadow-color);
+  display: block;
 }
 
 /* Services Tabs Styling */

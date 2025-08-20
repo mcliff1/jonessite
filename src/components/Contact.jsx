@@ -5,7 +5,7 @@ import FleetwoodLogo from '../images/Fleetwood160x160.jpg';
 const Contact = () => {
   return (
     <div className="contact-container">
-      <div className="contact-hero">
+      <div className="hero-section">
         <img src={TruckMountain} alt="Truck in the mountains" className="hero-image" />
         <div className="hero-content">
           <img src={FleetwoodLogo} alt="Jones Logistics" className="company-logo" />

@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { App } from '../src/App';
 import Contact from '../src/components/Contact';
-import About from '../src/components/About3';
+import About from '../src/components/About';
 
 describe('App Component', () => {
   const renderApp = () => {
