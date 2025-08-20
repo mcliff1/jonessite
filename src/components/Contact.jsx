@@ -1,10 +1,12 @@
 import React from 'react';
 import FleetwoodLogo from '../images/Fleetwood160x160.jpg';
+import RedTruckImage from '../images/redtruck_small.jpeg';
 
 const Contact = () => {
   return (
     <div className="about-container">
       <div className="hero-section hero-section-compact">
+        <img src={RedTruckImage} alt="Red truck background" className="hero-image" />
         <div className="hero-content">
           <div className="hero-header">
             <img src={FleetwoodLogo} alt="Jones Logistics" className="hero-logo" />

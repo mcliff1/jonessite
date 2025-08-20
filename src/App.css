@@ -348,6 +348,8 @@ footer p {
   .hero-text .hero-subtitle {
     text-align: center;
     font-size: 1rem;
+    padding: 0 1rem; /* Add horizontal padding */
+    line-height: 1.5; /* Improve readability */
   }
   
   .hero-content {
@@ -355,16 +357,19 @@ footer p {
   }
   
   .contact-content {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem; /* Increase horizontal padding */
+    margin-bottom: 2rem; /* Add bottom margin to prevent footer cutoff */
   }
   
   .contact-cards {
     gap: 1.5rem;
     grid-template-columns: 1fr;
+    margin-bottom: 2rem; /* Add margin to prevent content cutoff */
   }
   
   .contact-card {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 2.5rem 1.5rem; /* Add more bottom padding */
+    margin-bottom: 1rem; /* Add margin between cards */
   }
   
   .company-logo {
@@ -383,6 +388,16 @@ footer p {
   .contact-links a {
     padding: 1rem 1.25rem;
     font-size: 0.95rem;
+  }
+  
+  /* Ensure about-container has proper spacing on mobile */
+  .about-container {
+    padding-bottom: 3rem; /* Add extra bottom padding */
+  }
+  
+  /* Adjust main content padding for mobile */
+  .main-content {
+    padding-bottom: 3rem; /* Ensure content doesn't get cut off by footer */
   }
 }
 
@@ -558,6 +573,7 @@ footer p {
 @media (max-width: 768px) {
   body {
     background-size: auto, 1rem 1rem, 1rem 1rem, 50px 50px;
+    padding-bottom: 2rem; /* Add bottom padding to prevent content cutoff */
   }
 
   .container {
@@ -581,6 +597,12 @@ footer p {
 
   .separator {
     display: none;
+  }
+  
+  /* Ensure page wrapper handles mobile properly */
+  .page-wrapper {
+    min-height: 100vh;
+    padding-bottom: 2rem; /* Extra bottom padding */
   }
 }
 
