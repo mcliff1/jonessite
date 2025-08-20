@@ -315,7 +315,7 @@ footer p {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 400px; /* Smaller fixed height on mobile */
+    height: 440px; /* Smaller fixed height on mobile */
     padding: 2rem 0;
   }
   
