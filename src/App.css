@@ -315,19 +315,21 @@ footer p {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 400px; /* Smaller fixed height on mobile */
+    height: auto; /* Change to auto height on mobile */
+    min-height: 350px; /* Minimum height instead of fixed */
     padding: 2rem 0;
   }
   
   .hero-section-compact {
-    height: 250px; /* Even more compact on mobile */
-    padding: 1.5rem 0;
+    height: auto; /* Change to auto height on mobile */
+    min-height: 280px; /* Minimum height to ensure content fits */
+    padding: 2rem 0; /* Increase padding */
     margin-bottom: 1.5rem;
   }
   
   .hero-header {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem; /* Increase gap for better spacing */
     text-align: center;
   }
   
@@ -338,22 +340,29 @@ footer p {
   
   .hero-text {
     text-align: center;
+    padding: 0 1rem; /* Add padding to prevent text cutoff */
   }
   
   .hero-text .hero-title {
     text-align: center;
     font-size: 1.8rem;
+    margin-bottom: 1rem; /* Ensure proper spacing */
   }
   
   .hero-text .hero-subtitle {
     text-align: center;
     font-size: 1rem;
-    padding: 0 1rem; /* Add horizontal padding */
-    line-height: 1.5; /* Improve readability */
+    padding: 0 0.5rem; /* Reduce horizontal padding */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 1rem; /* Add bottom margin */
   }
   
   .hero-content {
-    padding: 0 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%; /* Ensure content uses full available height */
   }
   
   .contact-content {
