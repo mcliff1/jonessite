@@ -190,15 +190,6 @@ footer p {
   padding: 2rem;
 }
 
-.contact-hero {
-  position: relative;
-  padding: 4rem 0;
-  margin-bottom: 3rem;
-  background-color: var(--bg-overlay);
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
 .contact-content {
   position: relative;
   z-index: 2;
@@ -210,68 +201,220 @@ footer p {
 
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .contact-card {
-  background-color: var(--bg-overlay);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px var(--shadow-color);
-  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.95));
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card h3 {
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
 }
 
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .contact-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.75rem;
   text-decoration: none;
-  color: var(--text-color);
-  transition: color 0.2s ease;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-links a:hover {
-  color: var(--primary-color);
+.contact-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
-.contact-links .btn {
-  width: fit-content;
+.contact-links a:hover::before {
+  left: 100%;
+}
+
+.contact-links .btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.contact-links .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.contact-links .btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #545b62);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.contact-links .btn-secondary:hover {
+  background: linear-gradient(135deg, #545b62, #495057);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
 }
 
 .contact-links .phone {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  text-align: center;
+}
+
+.contact-links .phone:hover {
+  background: linear-gradient(135deg, #1e7e34, #155724);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  color: white;
+}
+
+.contact-links .phone::before {
+  content: "📞 ";
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
-  .contact-hero {
+  .hero-section {
+  height: auto; /* Allow hero to grow with content on mobile */
+  min-height: 520px; /* Ensure enough space to avoid truncation */
     padding: 2rem 0;
   }
   
+  .hero-section-compact {
+  height: auto; /* Only make Contact page flexible */
+  min-height: 380px; /* Increased minimum height for Contact page to fit content */
+    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .hero-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-text .hero-title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  
+  .hero-text .hero-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 1rem; /* Add horizontal padding */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 1.5rem; /* Increased bottom margin to prevent cutoff */
+  }
+  
+  .hero-content {
+    padding: 0 1rem 2rem 1rem; /* Add bottom padding */
+  }
+  
   .contact-content {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem 3rem 1rem; /* Increased bottom padding */
+    margin-bottom: 3rem; /* Increased margin to prevent footer cutoff */
   }
   
   .contact-cards {
     gap: 1.5rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem; /* Increased margin to prevent content cutoff */
+    padding-bottom: 2rem; /* Add padding at bottom of cards container */
+  }
+  
+  .contact-card {
+    padding: 2rem 1.5rem 3rem 1.5rem; /* Increased bottom padding */
+    margin-bottom: 1.5rem; /* Increased margin between cards */
+  }
+  
+  .company-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contact-links a {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Ensure about-container has proper spacing on mobile */
+  .about-container {
+    padding-bottom: 4rem; /* Increased bottom padding */
+    margin-bottom: 2rem; /* Add margin for extra space */
+  }
+  
+  /* Adjust main content padding for mobile */
+  .main-content {
+    padding-bottom: 4rem; /* Increased to ensure content doesn't get cut off by footer */
+    min-height: calc(100vh - 200px); /* Ensure minimum height with room for footer */
+  }
+  
+  /* Add extra spacing for services tabs on mobile */
+  .services-container {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
+  
+  .service-content {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -283,6 +426,50 @@ footer p {
   background-color: var(--bg-overlay);
   border-radius: 0.5rem;
   overflow: hidden;
+  height: 500px; /* Fixed height instead of min-height to prevent jumping */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Compact Hero Section for Contact Page */
+.hero-section-compact {
+  height: 300px; /* Reduced height for more compact layout */
+  padding: 2rem 0; /* Reduced padding */
+  margin-bottom: 2rem; /* Reduced bottom margin */
+}
+
+/* Hero Header Layout - Image and Text Side by Side */
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text .hero-title {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.hero-text .hero-subtitle {
+  text-align: left;
+  margin: 0;
 }
 
 .hero-content {
@@ -290,6 +477,9 @@ footer p {
   z-index: 2;
   color: var(--text-color);
   text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 2rem;
 }
 
 .hero-image {
@@ -299,6 +489,7 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0.3;
   z-index: 1;
 }
@@ -307,6 +498,7 @@ footer p {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: var(--primary-color);
+  font-weight: 600;
 }
 
 .hero-subtitle {
@@ -323,6 +515,7 @@ footer p {
   margin: 0 auto 2rem;
   border: 4px solid var(--primary-color);
   box-shadow: 0 4px 8px var(--shadow-color);
+  display: block;
 }
 
 /* Services Tabs Styling */
@@ -385,11 +578,18 @@ footer p {
   }
 
   .service-content {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.5rem 2rem 0.5rem; /* Added bottom padding */
+    margin-bottom: 2rem; /* Added margin for spacing */
   }
 
   .service-details {
     padding: 1rem;
+    margin-bottom: 1.5rem; /* Added margin to prevent cutoff */
+  }
+  
+  /* Ensure the last tab content has extra space */
+  .tab-content {
+    padding-bottom: 3rem;
   }
 }
 
@@ -397,14 +597,17 @@ footer p {
 @media (max-width: 768px) {
   body {
     background-size: auto, 1rem 1rem, 1rem 1rem, 50px 50px;
+    padding-bottom: 3rem; /* Increased bottom padding to prevent content cutoff */
   }
 
   .container {
     padding: 0 var(--spacing-sm);
+    margin-bottom: 2rem; /* Add margin to containers on mobile */
   }
 
   .jumbotron {
     padding: var(--spacing-md) var(--spacing-sm);
+    margin-bottom: 2rem; /* Increase margin for better spacing */
   }
 
   .footer-content {
@@ -421,6 +624,17 @@ footer p {
   .separator {
     display: none;
   }
+  
+  /* Ensure page wrapper handles mobile properly */
+  .page-wrapper {
+    min-height: 100vh;
+    padding-bottom: 3rem; /* Increased extra bottom padding */
+  }
+  
+  /* Add safe area for mobile browsers */
+  .main-content {
+    padding-bottom: max(4rem, env(safe-area-inset-bottom, 4rem)); /* Respect safe areas */
+  }
 }
 
 /* Responsive Images */
@@ -433,6 +647,8 @@ img {
 /* Page Layout */
 .page-wrapper {
   min-height: 100vh;
+  /* Use dynamic viewport height on mobile to handle browser UI */
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -440,6 +656,8 @@ img {
 .main-content {
   flex: 1;
   padding: var(--spacing-md) 0;
+  /* Ensure content has enough bottom space on mobile */
+  padding-bottom: max(var(--spacing-lg), env(safe-area-inset-bottom, 2rem));
 }
 
 /* Footer Enhancements */
@@ -478,4 +696,18 @@ footer {
 
 .back-to-top:hover {
   color: #007bff;
+}
+
+/* Final mobile overrides to ensure hero sizing is not overridden by later rules */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto !important; /* Ensure content is never clipped */
+    min-height: 580px; /* Extra space so Home text doesn't truncate */
+    padding: 2rem 0;
+  }
+  .hero-section-compact {
+    height: auto !important;
+    min-height: 420px; /* Slightly taller for Contact */
+    padding: 2rem 0;
+  }
 }

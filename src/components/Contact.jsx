@@ -1,19 +1,23 @@
 import React from 'react';
-import TruckMountain from '../images/TruckMountain_small.jpg';
 import FleetwoodLogo from '../images/Fleetwood160x160.jpg';
+import RedTruckImage from '../images/redtruck_small.jpeg';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
-      <div className="contact-hero">
-        <img src={TruckMountain} alt="Truck in the mountains" className="hero-image" />
+    <div className="about-container">
+      <div className="hero-section hero-section-compact">
+        <img src={RedTruckImage} alt="Red truck background" className="hero-image" />
         <div className="hero-content">
-          <img src={FleetwoodLogo} alt="Jones Logistics" className="company-logo" />
-          <h1 className="hero-title">Contact Us</h1>
-          <p className="hero-subtitle">
-            Let's discuss how Jones Logistics, a Priority 1 Inc. agency, can optimize 
-            your transportation and logistics needs with our decades of experience.
-          </p>
+          <div className="hero-header">
+            <img src={FleetwoodLogo} alt="Jones Logistics" className="hero-logo" />
+            <div className="hero-text">
+              <h1 className="hero-title">Contact Us</h1>
+              <p className="hero-subtitle">
+                Let's discuss how Jones Logistics, a Priority 1 Inc. agency, can optimize 
+                your transportation and logistics needs with our decades of experience.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -51,6 +55,36 @@ const Contact = () => {
               </a>
               <a href="tel:3038478919" className="phone">
                 303-847-8919 (direct)
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-card">
+            <h3>Cierra Chambers</h3>
+            <div className="contact-links">
+              <a href="mailto:cierra.chambers@priority1inc.net" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary">
+                cierra.chambers@priority1inc.net
+              </a>
+              <a href="tel:7203617342" className="phone">
+                720-361-7342 (direct)
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-card">
+            <h3>Josh Smith</h3>
+            <div className="contact-links">
+              <a href="mailto:josh.smith@priority1inc.net" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary">
+                josh.smith@priority1inc.net
+              </a>
+              <a href="tel:3035259919" className="phone">
+                303-525-9919 (direct)
               </a>
             </div>
           </div>
