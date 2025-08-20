@@ -4,7 +4,7 @@ import FleetwoodLogo from '../images/Fleetwood160x160.jpg';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div className="about-container"> {/* Use same container class as About page */}
       <div className="hero-section">
         <img src={TruckMountain} alt="Truck in the mountains" className="hero-image" />
         <div className="hero-content">
