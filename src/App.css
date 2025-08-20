@@ -697,3 +697,17 @@ footer {
 .back-to-top:hover {
   color: #007bff;
 }
+
+/* Final mobile overrides to ensure hero sizing is not overridden by later rules */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto !important; /* Ensure content is never clipped */
+    min-height: 580px; /* Extra space so Home text doesn't truncate */
+    padding: 2rem 0;
+  }
+  .hero-section-compact {
+    height: auto !important;
+    min-height: 420px; /* Slightly taller for Contact */
+    padding: 2rem 0;
+  }
+}
