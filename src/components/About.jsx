@@ -68,6 +68,18 @@ const About = () => {
                                 to quality and reliability makes us your ideal logistics partner.
                             </p>
                         </div>
+                        <div>&nbsp;</div>
+                        <h2>Claims Resolution</h2>
+                        <div className="service-details">
+                            <p>
+                                We have years of experience in dealing with insurance adjusters and how to best pursue and 
+                                resolve claims which are a part of any long term business relationship. These things happen 
+                                over the course of handling freight for many years and we know first hand how to react and 
+                                respond. Chad Hubble has collected over $400,000 paid out by the insurance and/or the carrier 
+                                directly by detailing accountability of root cause, situational understanding and our platform's 
+                                volume leverage in securing resolution for our clients.
+                            </p>
+                        </div>
                     </div>
                 </Tab>
 
