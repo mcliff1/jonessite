@@ -4,6 +4,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In Progress: using bootstrap Album/Carousel template to model some styling
 
+## Pull Request Management
+
+This repository includes a tool to check which open Pull Requests are ready to merge:
+
+```bash
+npm run check:prs
+```
+
+This script analyzes all open PRs and reports:
+- Which PRs are ready to merge
+- Which PRs are blocked and why
+- Recommendations for merge order
+
+For detailed analysis, see [docs/MERGEABLE_PRS.md](docs/MERGEABLE_PRS.md)
+
 ## Code Coverage Badge
 
 ![Coverage](badges/coverage.svg)
