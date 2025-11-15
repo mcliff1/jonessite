@@ -19,7 +19,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "check:prs": "node scripts/check-mergeable-prs.js"
   },
   "eslintConfig": {
     "extends": "react-app"
