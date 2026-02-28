@@ -1,0 +1,71 @@
+name: Create Integration PRs for feature/updt-0228
+
+on:
+  push:
+    branches:
+      - copilot/featureupdt-0228
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  create-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or verify integration PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BASE_BRANCH="feature/updt-0228"
+          REPO="mcliff1/jonessite"
+
+          PR_BODY="This PR is part of an integration bundle (\`feature/updt-0228\`) that aggregates dependency updates for testing on \`release/dev\`, with the intent to later merge into \`master\`.
+
+          Once all dependency update branches are merged into \`feature/updt-0228\`, that branch will be merged into \`release/dev\` for integration testing, and finally into \`master\`."
+
+          BRANCHES=(
+            "bump/react-19.2.1"
+            "dependabot/github_actions/aws-actions/configure-aws-credentials-6"
+            "dependabot/npm_and_yarn/jsdom-28.0.0"
+            "dependabot/npm_and_yarn/multi-b4fe5e61b3"
+            "dependabot/npm_and_yarn/react-19.2.4"
+            "dependabot/npm_and_yarn/react-dom-19.2.4"
+            "dependabot/npm_and_yarn/vite-7.3.1"
+          )
+
+          for BRANCH in "${BRANCHES[@]}"; do
+            TITLE="Merge ${BRANCH} into ${BASE_BRANCH}"
+            echo "Processing branch: $BRANCH"
+
+            # Check if PR already exists (open or closed)
+            EXISTING_PR=$(gh pr list \
+              --repo "$REPO" \
+              --head "$BRANCH" \
+              --base "$BASE_BRANCH" \
+              --state open \
+              --json number,url \
+              --jq '.[0]' 2>/dev/null)
+
+            if [ -n "$EXISTING_PR" ] && [ "$EXISTING_PR" != "null" ]; then
+              PR_NUMBER=$(echo "$EXISTING_PR" | jq -r '.number')
+              PR_URL=$(echo "$EXISTING_PR" | jq -r '.url')
+              echo "  PR already exists: #${PR_NUMBER} - ${PR_URL}"
+              gh pr comment "$PR_NUMBER" \
+                --repo "$REPO" \
+                --body "This PR is part of the integration bundle for \`${BASE_BRANCH}\`. It will be tested on \`release/dev\` before being merged into \`master\`." \
+                2>/dev/null && echo "  Added comment to existing PR" || echo "  Could not add comment"
+            else
+              echo "  Creating new PR: $TITLE"
+              gh pr create \
+                --repo "$REPO" \
+                --head "$BRANCH" \
+                --base "$BASE_BRANCH" \
+                --title "$TITLE" \
+                --body "$PR_BODY" \
+                2>&1 && echo "  PR created successfully" || echo "  Failed to create PR for $BRANCH"
+            fi
+          done
+
+          echo "Done processing all branches."
