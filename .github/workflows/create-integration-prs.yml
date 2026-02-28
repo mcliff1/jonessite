@@ -58,13 +58,16 @@ jobs:
                 2>/dev/null && echo "  Added comment to existing PR" || echo "  Could not add comment"
             else
               echo "  Creating new PR: $TITLE"
-              gh pr create \
+              if PR_URL=$(gh pr create \
                 --repo "$REPO" \
                 --head "$BRANCH" \
                 --base "$BASE_BRANCH" \
                 --title "$TITLE" \
-                --body "$PR_BODY" \
-                2>&1 && echo "  PR created successfully" || echo "  Failed to create PR for $BRANCH"
+                --body "$PR_BODY" 2>&1); then
+                echo "  PR created successfully: $PR_URL"
+              else
+                echo "  Failed to create PR for $BRANCH: $PR_URL"
+              fi
             fi
           done
 
