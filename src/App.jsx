@@ -51,7 +51,7 @@ function App() {
                 <a href="/#" className="back-to-top">Back to top</a>
               </p>
               <p className="footer-links">
-                &copy; 2017 - 2025 Jones Logistics, Inc
+                &copy; 2017 - 2026 Jones Logistics, Inc
                 <span className="separator">&middot;</span>
                 <NavLink to="/contact">Contact</NavLink>
                 <span className="separator">&middot;</span>
