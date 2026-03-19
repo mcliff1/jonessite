@@ -10,7 +10,7 @@
     "react": "^19.2.4",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.0",
+    "react-router-dom": "^7.13.1",
     "reactstrap": "^9.2.3"
   },
   "scripts": {
@@ -21,6 +21,10 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "check:prs": "node scripts/check-mergeable-prs.js"
+  },
+  "engines": {
+    "node": ">=22.12.0 <23",
+    "npm": ">=10.2.4"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,14 +43,14 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.1",
+    "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@vitejs/plugin-react-swc": "^4.2.2",
-    "@vitest/coverage-v8": "^4.0.17",
+    "@vitejs/plugin-react-swc": "^4.3.0",
+    "@vitest/coverage-v8": "^4.1.0",
     "coverage-badges-cli": "^2.2.0",
-    "jsdom": "^28.1.0",
-    "postcss": "^8.5.3",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.13"
+    "jsdom": "^29.0.0",
+    "postcss": "^8.5.8",
+    "vite": "^8.0.1",
+    "vitest": "^4.1.0"
   }
 }
