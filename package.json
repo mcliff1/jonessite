@@ -22,6 +22,10 @@
     "test:coverage": "vitest run --coverage",
     "check:prs": "node scripts/check-mergeable-prs.js"
   },
+  "engines": {
+    "node": ">=22.12.0 <23",
+    "npm": ">=10.2.4"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -42,7 +46,7 @@
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react-swc": "^4.3.0",
-    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/coverage-v8": "^4.1.0",
     "coverage-badges-cli": "^2.2.0",
     "jsdom": "^29.0.0",
     "postcss": "^8.5.8",

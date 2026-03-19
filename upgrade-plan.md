@@ -2,7 +2,7 @@
 
 ### 1. Dependency & Environment Upgrades
 - [ ] Upgrade to the latest stable React, React-Bootstrap, React Router, and testing libraries.
-- [ ] Upgrade Node.js/engine to match React requirements.
+- [x] Upgrade Node.js/engine to Node `22.12.0` to satisfy current toolchain requirements.
 - [ ] Audit/remove deprecated packages in `package.json`.
 
 ### 2. Code Refactor & Modernization

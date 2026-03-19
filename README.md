@@ -71,6 +71,35 @@ For Travis CI to build to S3 static site
 
 [![Build Status](https://travis-ci.org/mcliff1/jonessite.svg?branch=master)](https://travis-ci.org/mcliff1/jonessite)
 
+## Runtime
+
+- Node.js `22.12.0` or newer within the `22.x` line
+- npm `10.2.4` or newer
+
+If you use `nvm`, run `nvm use` from the repo root after installing Node `22.12.0`.
+
+### Setup
+
+To work on this repo in a separate shell with the expected runtime:
+
+```bash
+cd /Users/cliff/git/jonessite
+nvm install 22.12.0
+nvm use 22.12.0
+node -v
+npm -v
+npm install
+```
+
+If `nvm` is already installed, later sessions only need:
+
+```bash
+cd /Users/cliff/git/jonessite
+nvm use
+node -v
+npm -v
+```
+
 
 # Release Notes
 
