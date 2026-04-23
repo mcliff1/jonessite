@@ -46,7 +46,7 @@
     "coverage-badges-cli": "^2.2.0",
     "jsdom": "^29.0.2",
     "postcss": "^8.5.10",
-    "vite": "^8.0.8",
+    "vite": "^8.0.10",
     "vitest": "^4.1.4"
   }
 }
